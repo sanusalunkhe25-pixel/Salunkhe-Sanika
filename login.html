@@ -46,6 +46,8 @@
         }
 
 
+        /* LOGIN CONTAINER */
+
         .login-container {
             width: 90%;
 
@@ -99,14 +101,29 @@
         }
 
 
-        /* DEVELOPER TITLE */
+        /* WELCOME MESSAGE */
 
         .developer-title {
             color: #cbd5e1;
 
-            font-size: 1.1rem;
+            font-size: 1rem;
+
+            line-height: 1.6;
 
             margin-bottom: 30px;
+        }
+
+
+        /* LOGIN MESSAGE */
+
+        .login-message {
+            color: #cbd5e1;
+
+            font-size: 0.95rem;
+
+            margin-bottom: 20px;
+
+            text-align: center;
         }
 
 
@@ -264,16 +281,25 @@
         </h1>
 
 
-        <!-- DEVELOPER TITLE -->
+        <!-- WELCOME MESSAGE -->
 
         <p class="developer-title">
-            Backend Developer
+            Welcome to my portfolio website.
+            <br>
+            Login to explore my skills and projects.
         </p>
 
 
         <!-- LOGIN FORM -->
 
         <form onsubmit="loginUser(event)">
+
+
+            <!-- LOGIN MESSAGE -->
+
+            <p class="login-message">
+                Welcome Back! Please login to your account.
+            </p>
 
 
             <!-- EMAIL -->
