@@ -5,9 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Login | Sanika Salunkhe</title>
+
 
     <style>
 
@@ -16,6 +20,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
 
         body {
             font-family: Arial, sans-serif;
@@ -28,17 +33,22 @@
 
             align-items: center;
 
-            background: linear-gradient(
-                135deg,
-                #0f172a,
-                #172554
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
 
             color: #e5e7eb;
+
+            padding: 20px;
         }
+
 
         .login-container {
             width: 90%;
+
             max-width: 400px;
 
             padding: 40px;
@@ -52,27 +62,62 @@
             box-shadow:
                 0 0 30px
                 rgba(56, 189, 248, 0.2);
+
+            text-align: center;
         }
+
+
+        /* PROFILE IMAGE */
+
+        .profile-image {
+            width: 130px;
+
+            height: 130px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #38bdf8;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 0 25px
+                rgba(56, 189, 248, 0.35);
+        }
+
+
+        /* NAME */
 
         h1 {
-            text-align: center;
-
             color: #38bdf8;
 
-            margin-bottom: 10px;
+            font-size: 2rem;
+
+            margin-bottom: 5px;
         }
 
-        .subtitle {
-            text-align: center;
 
-            color: #94a3b8;
+        /* DEVELOPER TITLE */
+
+        .developer-title {
+            color: #cbd5e1;
+
+            font-size: 1.1rem;
 
             margin-bottom: 30px;
         }
 
+
+        /* FORM */
+
         .form-group {
             margin-bottom: 20px;
+
+            text-align: left;
         }
+
 
         label {
             display: block;
@@ -81,6 +126,7 @@
 
             color: #cbd5e1;
         }
+
 
         input {
             width: 100%;
@@ -100,9 +146,22 @@
             font-size: 1rem;
         }
 
+
         input:focus {
             border-color: #38bdf8;
+
+            box-shadow:
+                0 0 5px
+                rgba(56, 189, 248, 0.2);
         }
+
+
+        input::placeholder {
+            color: #64748b;
+        }
+
+
+        /* LOGIN BUTTON */
 
         .login-button {
             width: 100%;
@@ -126,11 +185,15 @@
             transition: 0.3s;
         }
 
+
         .login-button:hover {
             background: #7dd3fc;
 
             transform: translateY(-2px);
         }
+
+
+        /* BACK LINK */
 
         .back-home {
             display: block;
@@ -140,10 +203,36 @@
             margin-top: 20px;
 
             color: #38bdf8;
+
+            transition: 0.3s;
         }
+
 
         .back-home:hover {
             color: #7dd3fc;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 500px) {
+
+            .login-container {
+                padding: 30px 25px;
+            }
+
+
+            .profile-image {
+                width: 110px;
+
+                height: 110px;
+            }
+
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
         }
 
     </style>
@@ -154,14 +243,31 @@
 <body>
 
 
+    <!-- LOGIN CONTAINER -->
+
     <div class="login-container">
 
+
+        <!-- PROFILE IMAGE -->
+
+        <img
+            src="sanika.jpg"
+            alt="Sanika Salunkhe"
+            class="profile-image"
+        >
+
+
+        <!-- NAME -->
+
         <h1>
-            Welcome Back
+            Sanika Salunkhe
         </h1>
 
-        <p class="subtitle">
-            Login to Sanika's Portfolio
+
+        <!-- DEVELOPER TITLE -->
+
+        <p class="developer-title">
+            Backend Developer
         </p>
 
 
@@ -169,6 +275,8 @@
 
         <form onsubmit="loginUser(event)">
 
+
+            <!-- EMAIL -->
 
             <div class="form-group">
 
@@ -186,6 +294,8 @@
             </div>
 
 
+            <!-- PASSWORD -->
+
             <div class="form-group">
 
                 <label for="password">
@@ -202,6 +312,8 @@
             </div>
 
 
+            <!-- LOGIN BUTTON -->
+
             <button
                 type="submit"
                 class="login-button"
@@ -213,6 +325,8 @@
         </form>
 
 
+        <!-- BACK TO PORTFOLIO -->
+
         <a
             href="index.html"
             class="back-home"
@@ -220,21 +334,17 @@
             ← Back to Portfolio
         </a>
 
+
     </div>
 
+
+    <!-- LOGIN SCRIPT -->
 
     <script>
 
         function loginUser(event) {
 
             event.preventDefault();
-
-            /*
-             * Temporary frontend login.
-             *
-             * Later we can replace this with
-             * Node.js backend authentication.
-             */
 
             window.location.href = "home.html";
 
@@ -246,4 +356,3 @@
 </body>
 
 </html>
-
