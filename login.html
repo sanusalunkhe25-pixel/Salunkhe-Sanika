@@ -5,13 +5,9 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login | Sanika Salunkhe</title>
-
 
     <style>
 
@@ -21,9 +17,7 @@
             box-sizing: border-box;
         }
 
-
         body {
-
             font-family: Arial, sans-serif;
 
             min-height: 100vh;
@@ -34,26 +28,17 @@
 
             align-items: center;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #0f172a,
-                    #172554
-                );
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #172554
+            );
 
             color: #e5e7eb;
-
         }
 
-
-        /* =========================
-           LOGIN BOX
-        ========================= */
-
         .login-container {
-
             width: 90%;
-
             max-width: 400px;
 
             padding: 40px;
@@ -67,60 +52,37 @@
             box-shadow:
                 0 0 30px
                 rgba(56, 189, 248, 0.2);
-
         }
 
-
-        /* =========================
-           TITLE
-        ========================= */
-
-        .login-container h1 {
-
+        h1 {
             text-align: center;
 
             color: #38bdf8;
 
             margin-bottom: 10px;
-
         }
 
-
         .subtitle {
-
             text-align: center;
 
             color: #94a3b8;
 
             margin-bottom: 30px;
-
         }
-
-
-        /* =========================
-           FORM
-        ========================= */
 
         .form-group {
-
             margin-bottom: 20px;
-
         }
 
-
-        .form-group label {
-
+        label {
             display: block;
 
             margin-bottom: 8px;
 
             color: #cbd5e1;
-
         }
 
-
-        .form-group input {
-
+        input {
             width: 100%;
 
             padding: 13px;
@@ -136,34 +98,13 @@
             color: white;
 
             font-size: 1rem;
-
         }
 
-
-        .form-group input::placeholder {
-
-            color: #64748b;
-
-        }
-
-
-        .form-group input:focus {
-
+        input:focus {
             border-color: #38bdf8;
-
-            box-shadow:
-                0 0 8px
-                rgba(56, 189, 248, 0.2);
-
         }
-
-
-        /* =========================
-           LOGIN BUTTON
-        ========================= */
 
         .login-button {
-
             width: 100%;
 
             padding: 13px;
@@ -183,25 +124,15 @@
             cursor: pointer;
 
             transition: 0.3s;
-
         }
 
-
         .login-button:hover {
-
             background: #7dd3fc;
 
             transform: translateY(-2px);
-
         }
 
-
-        /* =========================
-           BACK TO PORTFOLIO
-        ========================= */
-
         .back-home {
-
             display: block;
 
             text-align: center;
@@ -209,31 +140,10 @@
             margin-top: 20px;
 
             color: #38bdf8;
-
-            text-decoration: none;
-
         }
-
 
         .back-home:hover {
-
             color: #7dd3fc;
-
-        }
-
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 500px) {
-
-            .login-container {
-
-                padding: 30px 20px;
-
-            }
-
         }
 
     </style>
@@ -244,34 +154,21 @@
 <body>
 
 
-    <!-- =========================
-         LOGIN CONTAINER
-    ========================= -->
-
     <div class="login-container">
-
 
         <h1>
             Welcome Back
         </h1>
-
 
         <p class="subtitle">
             Login to Sanika's Portfolio
         </p>
 
 
-        <!-- =========================
-             LOGIN FORM
-        ========================= -->
+        <!-- LOGIN FORM -->
 
-        <form
-            action="/login"
-            method="POST"
-        >
+        <form onsubmit="loginUser(event)">
 
-
-            <!-- EMAIL -->
 
             <div class="form-group">
 
@@ -282,15 +179,12 @@
                 <input
                     type="email"
                     id="email"
-                    name="email"
                     placeholder="Enter your email"
                     required
                 >
 
             </div>
 
-
-            <!-- PASSWORD -->
 
             <div class="form-group">
 
@@ -301,15 +195,12 @@
                 <input
                     type="password"
                     id="password"
-                    name="password"
                     placeholder="Enter your password"
                     required
                 >
 
             </div>
 
-
-            <!-- LOGIN BUTTON -->
 
             <button
                 type="submit"
@@ -322,8 +213,6 @@
         </form>
 
 
-        <!-- BACK TO PORTFOLIO -->
-
         <a
             href="index.html"
             class="back-home"
@@ -331,8 +220,27 @@
             ← Back to Portfolio
         </a>
 
-
     </div>
+
+
+    <script>
+
+        function loginUser(event) {
+
+            event.preventDefault();
+
+            /*
+             * Temporary frontend login.
+             *
+             * Later we can replace this with
+             * Node.js backend authentication.
+             */
+
+            window.location.href = "home.html";
+
+        }
+
+    </script>
 
 
 </body>
