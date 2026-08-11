@@ -1,342 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanika Salunkhe | Backend Developer</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #e5e7eb;
-      background: #0f172a;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    <title>Sanika Salunkhe | Backend Developer</title>
 
-    header {
-      background: #111827;
-      padding: 20px 8%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #1f2937;
-    }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    <style>
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #38bdf8;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-    }
 
-    nav ul li a {
-      color: #d1d5db;
-      transition: 0.3s;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #e5e7eb;
+            background: #0f172a;
+        }
 
-    nav ul li a:hover {
-      color: #38bdf8;
-    }
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      padding: 60px 8%;
-      background: linear-gradient(135deg, #0f172a, #172554);
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    .hero-content {
-      max-width: 750px;
-    }
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 7vw, 5rem);
-      margin-bottom: 10px;
-      color: white;
-    }
+        /* =========================
+           HEADER
+        ========================= */
 
-    .hero h2 {
-      font-size: clamp(1.3rem, 3vw, 2rem);
-      color: #38bdf8;
-      margin-bottom: 20px;
-    }
+        header {
+            background: #111827;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1f2937;
+        }
 
-    .hero p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #38bdf8;
-      color: #082f49;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .btn:hover {
-      background: #7dd3fc;
-      transform: translateY(-2px);
-    }
 
-    section {
-      padding: 80px 8%;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+        }
 
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 45px;
-      color: white;
-    }
 
-    .about {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: #cbd5e1;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
 
-    .skills {
-      background: #111827;
-    }
 
-    .skill-grid {
-      max-width: 900px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-    }
+        nav ul li a {
+            color: #d1d5db;
+            transition: 0.3s;
+        }
 
-    .skill {
-      padding: 20px;
-      text-align: center;
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
 
-    .skill:hover {
-      border-color: #38bdf8;
-      transform: translateY(-5px);
-    }
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
 
-    .projects {
-      max-width: 1000px;
-      margin: auto;
-    }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+        /* LOGIN BUTTON */
 
-    .project-card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid #334155;
-    }
+        .login-btn {
+            background: #38bdf8;
+            color: #082f49 !important;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
 
-    .project-card h3 {
-      color: #38bdf8;
-      margin-bottom: 12px;
-    }
 
-    .project-card p {
-      color: #cbd5e1;
-    }
+        .login-btn:hover {
+            background: #7dd3fc;
+        }
 
-    .contact {
-      text-align: center;
-      background: #111827;
-    }
 
-    .contact p {
-      color: #cbd5e1;
-      margin-bottom: 25px;
-    }
+        /* =========================
+           HERO SECTION
+        ========================= */
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #0b1120;
-      color: #94a3b8;
-    }
+        .hero {
+            min-height: 90vh;
 
-    @media (max-width: 600px) {
-      header {
-        padding: 15px 5%;
-      }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+            gap: 60px;
 
-      nav ul {
-        gap: 15px;
-        font-size: 0.9rem;
-      }
+            padding: 60px 8%;
 
-      .hero {
-        min-height: 80vh;
-        padding: 50px 5%;
-        text-align: center;
-      }
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+        }
 
-      section {
-        padding: 60px 5%;
-      }
-    }
-  </style>
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            margin-bottom: 10px;
+            color: white;
+        }
+
+
+        .hero h2 {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .hero-image {
+            flex-shrink: 0;
+        }
+
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid #38bdf8;
+
+            box-shadow:
+                0 0 30px
+                rgba(56, 189, 248, 0.35);
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            background: #38bdf8;
+
+            color: #082f49;
+
+            font-weight: bold;
+
+            border-radius: 6px;
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            font-size: 2rem;
+
+            margin-bottom: 45px;
+
+            color: white;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            background: #111827;
+        }
+
+
+        .skill-grid {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(150px, 1fr)
+                );
+
+            gap: 20px;
+        }
+
+
+        .skill {
+            padding: 20px;
+
+            text-align: center;
+
+            background: #1e293b;
+
+            border: 1px solid #334155;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+
+        .skill:hover {
+            border-color: #38bdf8;
+
+            transform: translateY(-5px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(250px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+
+        .project-card {
+            background: #1e293b;
+
+            padding: 25px;
+
+            border-radius: 8px;
+
+            border: 1px solid #334155;
+
+            transition: 0.3s;
+        }
+
+
+        .project-card:hover {
+            border-color: #38bdf8;
+
+            transform: translateY(-5px);
+        }
+
+
+        .project-card h3 {
+            color: #38bdf8;
+
+            margin-bottom: 12px;
+        }
+
+
+        .project-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+
+            background: #111827;
+        }
+
+
+        .contact p {
+            color: #cbd5e1;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #0b1120;
+
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .hero {
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                justify-content: center;
+
+                padding: 60px 5%;
+            }
+
+
+            .hero-image img {
+                width: 230px;
+
+                height: 230px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            nav ul {
+                gap: 15px;
+
+                font-size: 0.9rem;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .hero {
+                min-height: 80vh;
+            }
+
+
+            section {
+                padding: 60px 5%;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="logo">Sanika Salunkhe</div>
 
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="login.html></a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm Sanika.</h1>
-      <h2>Backend Developer</h2>
-      <p>
-        I build reliable, scalable, and efficient backend applications.
-        I enjoy working with APIs, databases, server-side logic, and
-        solving real-world problems through code.
-      </p>
+    <header>
 
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
+        <nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
+            <div class="logo">
+                Sanika Salunkhe
+            </div>
 
-    <div class="about">
-      <p>
-        I'm Sanika Salunkhe, a backend developer passionate about building
-        efficient and secure web applications. I enjoy designing APIs,
-        working with databases, writing clean code, and learning new
-        technologies to improve my development skills.
-      </p>
-    </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2 class="section-title">My Skills</h2>
+            <ul>
 
-    <div class="skill-grid">
-      <div class="skill">Python</div>
-      <div class="skill">Java</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">REST APIs</div>
-      <div class="skill">SQL</div>
-      <div class="skill">MongoDB</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Database Design</div>
-    </div>
-  </section>
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
 
-    <div class="projects">
-      <div class="project-grid">
+                <li>
+                    <a href="#skills">
+                        Skills
+                    </a>
+                </li>
 
-        <div class="project-card">
-          <h3>Task Management API</h3>
-          <p>
-            A backend REST API for creating, updating, deleting, and
-            managing tasks with database integration.
-          </p>
+
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="login.html"
+                        class="login-btn"
+                    >
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <section class="hero">
+
+
+        <div class="hero-content">
+
+            <h1>
+                Hi, I'm Sanika.
+            </h1>
+
+
+            <h2>
+                Backend Developer
+            </h2>
+
+
+            <p>
+                I build reliable, scalable, and efficient
+                backend applications. I enjoy working with
+                APIs, databases, server-side logic, and
+                solving real-world problems through code.
+            </p>
+
+
+            <a
+                href="#projects"
+                class="btn"
+            >
+                View My Work
+            </a>
+
         </div>
 
-        <div class="project-card">
-          <h3>Employee Management System</h3>
-          <p>
-            A server-side application for managing employee information,
-            departments, and basic employee operations.
-          </p>
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="hero-image">
+
+            <img
+                src="profile.jpg"
+                alt="Sanika Salunkhe"
+            >
+
         </div>
 
-        <div class="project-card">
-          <h3>Authentication API</h3>
-          <p>
-            A secure backend authentication system with user registration,
-            login, password protection, and API authorization.
-          </p>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+
+        <div class="about">
+
+            <p>
+                I'm Sanika Salunkhe, a backend developer
+                passionate about building efficient and
+                secure web applications. I enjoy designing
+                APIs, working with databases, writing clean
+                code, and learning new technologies to
+                improve my development skills.
+            </p>
+
         </div>
 
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">Let's Connect</h2>
 
-    <p>
-      Interested in working together or discussing a project?
-      Feel free to get in touch.
-    </p>
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
-    <a href="mailto:your.email@example.com" class="btn">
-      Contact Me
-    </a>
-  </section>
+    <section
+        id="skills"
+        class="skills"
+    >
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Sanika Salunkhe. All rights reserved.</p>
-  </footer>
+        <h2 class="section-title">
+            My Skills
+        </h2>
+
+
+        <div class="skill-grid">
+
+            <div class="skill">
+                Python
+            </div>
+
+
+            <div class="skill">
+                Java
+            </div>
+
+
+            <div class="skill">
+                Node.js
+            </div>
+
+
+            <div class="skill">
+                REST APIs
+            </div>
+
+
+            <div class="skill">
+                SQL
+            </div>
+
+
+            <div class="skill">
+                MongoDB
+            </div>
+
+
+            <div class="skill">
+                Git & GitHub
+            </div>
+
+
+            <div class="skill">
+                Database Design
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+
+        <div class="projects">
+
+            <div class="project-grid">
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Task Management API
+                    </h3>
+
+                    <p>
+                        A backend REST API for creating,
+                        updating, deleting, and managing
+                        tasks with database integration.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Employee Management System
+                    </h3>
+
+                    <p>
+                        A server-side application for
+                        managing employee information,
+                        departments, and basic employee
+                        operations.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Authentication API
+                    </h3>
+
+                    <p>
+                        A secure backend authentication
+                        system with user registration,
+                        login, password protection, and
+                        API authorization.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section
+        id="contact"
+        class="contact"
+    >
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+
+        <p>
+            Interested in working together or discussing
+            a project? Feel free to get in touch.
+        </p>
+
+
+        <a
+            href="mailto:your.email@example.com"
+            class="btn"
+        >
+            Contact Me
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Sanika Salunkhe.
+            All rights reserved.
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>
+
