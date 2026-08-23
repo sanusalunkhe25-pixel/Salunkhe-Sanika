@@ -1,63 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Registration Page</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+
+            padding: 30px;
+        }
+
+
+        /* Registration Box */
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+
+            background: #111827;
+
+            padding: 35px 40px;
+
+            border-radius: 12px;
+
+            border: 1px solid #334155;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* Heading */
+
+        h1 {
+            text-align: center;
+
+            color: #38bdf8;
+
+            margin-bottom: 30px;
+
+            font-size: 30px;
+        }
+
+
+        /* Form */
+
+        form {
+            width: 100%;
+        }
+
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+
+        label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #cbd5e1;
+
+            font-weight: bold;
+        }
+
+
+        /* Input */
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"] {
+
+            width: 100%;
+
+            padding: 12px;
+
+            background: #1e293b;
+
+            color: white;
+
+            border: 1px solid #475569;
+
+            border-radius: 6px;
+
+            outline: none;
+
+            font-size: 15px;
+        }
+
+
+        input:focus {
+            border-color: #38bdf8;
+
+            box-shadow:
+                0 0 5px rgba(56, 189, 248, 0.3);
+        }
+
+
+        /* Gender */
+
+        .gender {
+            display: flex;
+
+            gap: 20px;
+
+            align-items: center;
+        }
+
+
+        .gender label {
+            display: inline;
+
+            font-weight: normal;
+
+            margin: 0;
+        }
+
+
+        .gender input {
+            margin-right: 5px;
+        }
+
+
+        /* Terms */
+
+        .terms {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 20px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .terms label {
+            margin: 0;
+
+            font-weight: normal;
+
+            font-size: 14px;
+        }
+
+
+        /* Buttons */
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+        }
+
+
+        button {
+            flex: 1;
+
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .register {
+            background: #38bdf8;
+
+            color: #082f49;
+        }
+
+
+        .register:hover {
+            background: #7dd3fc;
+
+            transform: translateY(-2px);
+        }
+
+
+        .reset {
+            background: #334155;
+
+            color: white;
+        }
+
+
+        .reset:hover {
+            background: #475569;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* Login Link */
+
+        .login-link {
+            text-align: center;
+
+            margin-top: 25px;
+
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+
+        .login-link a {
+            color: #38bdf8;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .gender {
+                gap: 10px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>Registration Form</h1>
 
-    <form>
+    <div class="container">
 
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" required>
-        <br><br>
+        <h1>Registration Form</h1>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" required>
-        <br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+        <form>
 
-        <label for="mobile">Mobile Number:</label>
-        <input type="tel" id="mobile" name="mobile" required>
-        <br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
+            <!-- First Name -->
 
-        <label for="cpassword">Confirm Password:</label>
-        <input type="password" id="cpassword" name="cpassword" required>
-        <br><br>
+            <div class="form-group">
 
-        <label>Gender:</label>
-        <input type="radio" name="gender" value="male"> Male
-        <input type="radio" name="gender" value="female"> Female
-        <input type="radio" name="gender" value="other"> Other
-        <br><br>
+                <label for="fname">
+                    First Name:
+                </label>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob">
-        <br><br>
+                <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    required
+                >
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city">
-        <br><br>
+            </div>
 
-        <input type="checkbox" id="terms" required>
-        <label for="terms">I agree to the Terms & Conditions</label>
-        <br><br>
 
-        <button type="submit">Register</button>
-        <button type="reset">Reset</button>
+            <!-- Last Name -->
 
-    </form>
+            <div class="form-group">
+
+                <label for="lname">
+                    Last Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Mobile -->
+
+            <div class="form-group">
+
+                <label for="mobile">
+                    Mobile Number:
+                </label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password:
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Confirm Password -->
+
+            <div class="form-group">
+
+                <label for="cpassword">
+                    Confirm Password:
+                </label>
+
+                <input
+                    type="password"
+                    id="cpassword"
+                    name="cpassword"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Gender -->
+
+            <div class="form-group">
+
+                <label>
+                    Gender:
+                </label>
+
+                <div class="gender">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                        >
+                        Male
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                        >
+                        Female
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                        >
+                        Other
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Date of Birth -->
+
+            <div class="form-group">
+
+                <label for="dob">
+                    Date of Birth:
+                </label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                >
+
+            </div>
+
+
+            <!-- City -->
+
+            <div class="form-group">
+
+                <label for="city">
+                    City:
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                >
+
+            </div>
+
+
+            <!-- Terms -->
+
+            <div class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+
+                <label for="terms">
+                    I agree to the Terms & Conditions
+                </label>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button
+                    type="submit"
+                    class="register"
+                >
+                    Register
+                </button>
+
+                <button
+                    type="reset"
+                    class="reset"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+
+            <!-- Login -->
+
+            <div class="login-link">
+
+                Already have an account?
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
 
 </body>
+
 </html>
